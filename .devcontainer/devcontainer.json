@@ -9,7 +9,7 @@
         "ghcr.io/devcontainers-contrib/features/poetry:2": {}
     },
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "poetry config virtualenvs.in-project true && poetry install && git config --global --add safe.directory ${containerWorkspaceFolder}",
+    "postCreateCommand": "poetry config virtualenvs.in-project true && poetry install && git config --global --add safe.directory ${containerWorkspaceFolder} && pip install --user --upgrade nox",
     // Configure tool-specific properties.
     "customizations": {
         "vscode": {
