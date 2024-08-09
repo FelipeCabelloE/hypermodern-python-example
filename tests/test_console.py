@@ -4,10 +4,12 @@ import requests
 
 from hypermodern_python_example import console
 
+
 @pytest.mark.e2e
 def test_main_succeeds_in_production_env(runner):
     result = runner.invoke(console.main)
     assert result.exit_code == 0
+
 
 @pytest.fixture
 def runner():
